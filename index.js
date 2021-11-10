@@ -101,6 +101,7 @@ function Car(model, milesPerGallon) {
 
 Car.prototype.fill = function(gallons){
   this.tank = this.tank + gallons;
+  // this.tank += gallons;
 }
 
 const buick = new Car ('Buick', 25);
@@ -125,19 +126,23 @@ Baby.prototype.play = function(){
   return `Playing with ${this.favoriteToy}`;
 }
 
-const louis = new Baby('Louis', 1);
+const louis = new Baby('Louis', 1, 'train');
 
-louis.play('lego');
-console.log(louis.play);
+console.log(louis.play());
+console.log(louis);
 
 
 
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
+  
+  1. Window/Global Object binding - when in global scope, the value of 'this' will be teh window or console object (in this case, 'this' is without context)
+  
+  2. Implicit Binding - 
+  
   3. 
+  
   4. 
 */
 
